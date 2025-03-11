@@ -2,7 +2,9 @@ import express from 'express';
 import axios from 'axios';
 
 const app = express();
-const port = process.env.PORT || 5000;  
+
+// הגדרת פורט בצורה ברורה
+const PORT = process.env.PORT || 5005;
 
 const options = {
   method: 'GET',
@@ -24,6 +26,7 @@ app.get('/apps', (req, res) => {
     });
 });
 
+// האזנה לפורט
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Server is running on port ${PORT}`);
 });
